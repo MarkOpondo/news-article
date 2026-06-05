@@ -48,7 +48,7 @@ def count_paragraphs(article):
     paragraph_count = len([p.strip() for p in paragraphs if p.strip()])
     
     if not paragraph_count:
-        print(0)
+        print(1)
     else:
         print(paragraph_count)
 
@@ -58,7 +58,7 @@ def count_sentences(article):
     total_sentences = len(sentences)
     
     if not total_sentences:
-        print(0)
+        print(1)
     else: 
         print(total_sentences)
 
