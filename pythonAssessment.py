@@ -47,7 +47,13 @@ def count_paragraphs(article):
 
     print(paragraph_count)
 
+def count_sentences(article):
+    sentences = re.findall(r"(?<=[.!?])+", article)
+    total_sentences = len(sentences)
+
+    print(total_sentences)
 # count_specific_word('you', article)
 # identify_most_common_word(article)
 # calculate_average_word_length(article)
-count_paragraphs(article)
+# count_paragraphs(article)
+count_sentences(article)
