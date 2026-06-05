@@ -16,4 +16,16 @@ def count_specific_word(target_word, article):
         print(target_count)
     
 
-count_specific_word('you', article)
+def identify_most_common_word(article):
+    all_words = re.findall(r"\b\w+\b", article.lower())
+    word_count = Counter(all_words)
+    most_common_word, frequency = word_count.most_common(1)[0]
+
+    if not most_common_word:
+        None
+    else:
+        print(most_common_word, frequency)
+
+
+# count_specific_word('you', article)
+identify_most_common_word(article)
