@@ -1,8 +1,8 @@
 import re
+from pathlib import Path
 from collections import Counter
 
-with open('NewsArticleforPythonAssessment.txt', 'r', encoding='utf-8') as file:
-    article = file.read()
+article = Path("NewsArticleforPythonAssessment.txt").read_text(encoding="utf-8")
 
 
 def count_specific_word(target_word, article):
