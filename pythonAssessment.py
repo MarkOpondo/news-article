@@ -10,7 +10,10 @@ def count_specific_word(target_word, article):
     word_count = Counter(all_words)
     target_count = word_count[target_word.lower()]
 
-    print(target_count)
+    if not target_count:
+        print(0)
+    else:
+        print(target_count)
     
 
-count_specific_word('the', article)
+count_specific_word('you', article)
