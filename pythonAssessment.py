@@ -27,5 +27,8 @@ def identify_most_common_word(article):
         print(most_common_word, frequency)
 
 
+def calculate_average_word_length(article):
+    None
+
 # count_specific_word('you', article)
 identify_most_common_word(article)
