@@ -40,6 +40,14 @@ def calculate_average_word_length(article):
         print(average_word_length)
 
 
+def count_paragraphs(article):
+    paragraphs = re.split(r"\n\n", article)
+
+    paragraph_count = len([p.strip() for p in paragraphs if p.strip()])
+
+    print(paragraph_count)
+
 # count_specific_word('you', article)
 # identify_most_common_word(article)
-calculate_average_word_length(article)
+# calculate_average_word_length(article)
+count_paragraphs(article)
