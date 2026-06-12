@@ -35,6 +35,7 @@ def calculate_average_word_length(article):
     if not all_words:
         print(0)
     else:
+        total_words = len(all_words)
         total_letters = 0
         for word in all_words:
             total_letters += len(word)
