@@ -40,7 +40,6 @@ def calculate_average_word_length(article):
         for word in all_words:
             total_letters += len(word)
             
-        # total_letters = sum(len(word) for word in all_words)
 
         average_word_length = total_letters / total_words
 
