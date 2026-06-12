@@ -32,15 +32,18 @@ def identify_most_common_word(article):
 def calculate_average_word_length(article):
     all_words = re.findall(r"\b\w+\b", article.lower())
     
-    total_words = len(all_words)
-    total_letters = sum(len(word) for word in all_words)
-
-    average_word_length = total_letters / total_words
-
-    if not average_word_length:
+    if all_words == "":
         print(0)
     else:
-        print(average_word_length)
+        total_words = len(all_words)
+        total_letters = sum(len(word) for word in all_words)
+
+        average_word_length = total_letters / total_words
+
+        if not average_word_length:
+            print(0)
+        else:
+            print(average_word_length)
 
 
 def count_paragraphs(article):
