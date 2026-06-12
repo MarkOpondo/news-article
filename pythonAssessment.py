@@ -35,7 +35,10 @@ def calculate_average_word_length(article):
     if not all_words:
         print(0)
     else:
-        total_words = len(all_words)
+        total_words = 0
+        for word in all_words:
+            total_words += len(word)
+            
         total_letters = sum(len(word) for word in all_words)
 
         average_word_length = total_letters / total_words
@@ -58,7 +61,10 @@ def count_paragraphs(article):
 
 def count_sentences(article):
     sentences = re.findall(r"(?<=[.!?])+", article)
-    total_sentences = len(sentences)
+
+    while sentences:
+
+        total_sentences = len(sentences)
     
     if not total_sentences:
         print(1)
