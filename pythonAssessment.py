@@ -5,7 +5,7 @@ from collections import Counter
 article = Path("NewsArticleforPythonAssessment.txt").read_text(encoding="utf-8")
 
 
-def count_specific_word(target_word, article):
+def count_specific_word(article, target_word):
     all_words = re.findall(r"\b\w+\b", article.lower())
     word_count = Counter(all_words)
     
@@ -62,8 +62,10 @@ def count_sentences(article):
     else: 
         print(total_sentences)
 
-# count_specific_word('you', article)
+count_specific_word("This is a test. This is only a test.", "test")
+count_specific_word("apple apple banana banana banana", "banana")
+count_specific_word("", "test")
 # identify_most_common_word(article)
 # calculate_average_word_length(article)
 # count_paragraphs(article)
-count_sentences(article)
+# count_sentences(article)
