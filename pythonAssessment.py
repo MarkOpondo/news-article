@@ -32,7 +32,7 @@ def identify_most_common_word(article):
 def calculate_average_word_length(article):
     all_words = re.findall(r"\b\w+\b", article.lower())
     
-    if all_words == "":
+    if not all_words:
         print(0)
     else:
         total_words = len(all_words)
